@@ -1,6 +1,7 @@
 package task1;
 
-import java.util.ArrayList;
+
+import java.util.Arrays;
 import java.util.Collections;
 
 
@@ -11,18 +12,18 @@ import java.util.Collections;
 public class Cart {
 	
 	private String name;
-	private ArrayList<Computer> computers;
+	private Computer[] computers;
 	
 	 Cart(String Iname){
 		
 		name=Iname;
-		this.computers = new ArrayList();
+		this.computers = new Computer[0];
 	}
 	 Cart(String Iname, Computer[] computers){
 		
 		name=Iname;
-		this.computers = new ArrayList();
-		for(Computer computer: computers) this.computers.add(computer);
+		this.computers = Arrays.copyOf(computers,computers.length);
+		
 		
 	}
 	
@@ -30,11 +31,15 @@ public class Cart {
 	
 	
 	public void addComputer(Computer computer){
-		computers.add(computer);
+		
+		Computer[] newcomputers=Arrays.copyOf(computers, computers.length+1);
+		
+		newcomputers[computers.length]=computer;
+		computers=newcomputers;
 	}
 
 	public Computer getComputer(int i){
-		return computers.get(i);
+		return computers[i];
 	}
 	
 	public String toString(){
@@ -46,8 +51,8 @@ public class Cart {
 		return name+"\n" + "Computers: "+res;
 	}
 
-	public void sort(){
+	/*public void sort(){
 		
 		Collections.sort(computers);
-	}
+	}*/
 }

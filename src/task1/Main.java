@@ -14,7 +14,7 @@ public class Main {
 		Cart cart1 = new Cart("Shop",comps);
 		
 		System.out.println(cart1);
-		cart1.sort();
+		//cart1.sort();
 		System.out.println(cart1);
 	}
 

@@ -1,6 +1,6 @@
 package task1;
 
-public abstract class Computer implements Comparable<Computer> {
+public abstract class Computer {
 
 	protected int price;
 	protected String name;
@@ -38,12 +38,6 @@ public abstract class Computer implements Comparable<Computer> {
 	}
 	
 	
-	public int compareTo(Computer comp){
-		
-		if(this.price>comp.price) return 1;
-		if(this.price<comp.price) return -1;
-		
-		return 0;
-	}
+	
 	
 }

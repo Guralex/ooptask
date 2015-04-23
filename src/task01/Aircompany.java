@@ -1,11 +1,12 @@
 package task01;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 
 
-public class Aircompany  /*implements Comparable<Plane>*/{
+public class Aircompany {
 
 	private String name;
 	private ArrayList<Plane> planes;
@@ -51,6 +52,12 @@ public class Aircompany  /*implements Comparable<Plane>*/{
 	}
 
 
+public void sort(){
+		
+		Collections.sort(planes);
+	}
+
+	
 	public String toString(){
 		
 		String res="";

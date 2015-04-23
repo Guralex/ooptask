@@ -1,6 +1,6 @@
 package task01;
 
-public abstract class Plane  {
+public abstract class Plane implements Comparable<Plane> {
 
 	
 	protected String name;
@@ -39,6 +39,13 @@ public abstract class Plane  {
 		return name;
 	}
 	
+	
+	public int compareTo(Plane plane){
+		if(this.fuelConsumption>plane.fuelConsumption) return 1;
+		if(this.fuelConsumption<plane.fuelConsumption) return -1;
+		
+		return 0;
+	}
 	
 	public String toString(){
 		
