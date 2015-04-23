@@ -3,12 +3,19 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int[] a = {1,2,5};
-		String s1= new String(a,1,2);
-
+		Airliners boeing = new Airliners(300,15,1000,"Boeing 747");
+		Airliners antonov = new Airliners(100,7,700,"AN 41");
+		Freighters mria = new Freighters(100,5,700,"AN MRIA");
+		
+		Plane[] planes = {antonov,mria};
+		
+		Aircompany air = new Aircompany("AirlineOne",planes);
+		
+		System.out.println(air);
 		
 		
-		System.out.println(s1);
+		
+		air.showByFuel(6, 20);
 		
 	}
 

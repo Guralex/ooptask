@@ -1,11 +1,12 @@
 
-public abstract class Plane {
+public abstract class Plane  {
 
 	
-	private int weightLimit;
-	private int passengerLimit;
-	private int fuelConsumption;
-	private int flightRange;
+	protected String name;
+	protected int weightLimit;
+	protected int passengerLimit;
+	protected int fuelConsumption;
+	protected int flightRange;
 	
 	
 	
@@ -20,6 +21,7 @@ public abstract class Plane {
 	
 	
 	
+
 	public int getWeightLimit() {
 		return weightLimit;
 	}
@@ -32,5 +34,16 @@ public abstract class Plane {
 	public int getFlightRange() {
 		return flightRange;
 	}
+	public String getName(){
+		return name;
+	}
 	
+	
+	public String toString(){
+		
+		
+		
+		
+		return "NAME: "+name+"\n"+"Pass. limit: "+passengerLimit+"\n"+"Weigh limit: "+weightLimit+"\n"+"Range: "+flightRange+"\n"+"Fuel con.: "+fuelConsumption+"\n";
+	}
 }
