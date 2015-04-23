@@ -1,3 +1,4 @@
+package task01;
 
 public class Freighters extends Plane {
 	
