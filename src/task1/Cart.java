@@ -46,13 +46,31 @@ public class Cart {
 		
 		String res="";
 		
-		for(Computer computer:computers) res+= computer.getName();
+		for(Computer computer:computers) res+= computer.getName()+"  |  ";
 		
-		return name+"\n" + "Computers: "+res;
+		return "---------- \n" + "Cart: "+name+"\n" + "Computers: "+res;
 	}
 
-	/*public void sort(){
+	public void sort(){
 		
-		Collections.sort(computers);
-	}*/
+		int prevkey;
+		Computer comp;
+		
+		for(int i=0;i<computers.length; i++)
+		{
+			comp=computers[i];
+			prevkey=i-1;
+			while(prevkey>=0 && computers[prevkey].getPrice()>comp.getPrice())
+				{
+				computers[prevkey+1]=computers[prevkey];
+				computers[prevkey]=comp;
+					prevkey--;
+				}
+			
+		}
+	}
+
+	public int count(){
+		return computers.length;
+	}
 }

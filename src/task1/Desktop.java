@@ -36,7 +36,7 @@ public class Desktop extends Computer {
 	public String toString(){
 		
 		
-		return "Name:"+name+";\n"+"Price:"+price+";\n"+"Display:"+displayComplected+";\n"+"Keyboard:"+keyboardComplected+";\n";
+		return "-----------\n"+name+"\n"+"Price:"+price+";\n"+"Display:"+displayComplected+";\n"+"Keyboard:"+keyboardComplected+";\n";
 	}
 
 
