@@ -52,10 +52,64 @@ public abstract class Person {
 	}
 	public Person date(Person obj){
 		if(talk(obj)&&tolerate(obj)&&spendTime(obj)){
-			if(obj.sex==this.sex) return null; 
-			if(obj.sex==false) obj.giveBirth();
+			if(obj.sex==this.sex) {System.out.println("Date fail");return null; }
+		
+			if(obj.sex==false) {
+				Woman woman = new Woman(obj.name, obj.name, obj.height, obj.height);
+				
+				return woman.giveBirth(this, "Sanya");
+			}
+			
+			Woman woman = new Woman(this.name, this.name,this.height, this.height);
+			return woman.giveBirth(obj, "Sanya");
 		};
+		System.out.println("Date fail");
 		return null;
+	}
+
+
+
+	public String toString(){
+		
+		
+		return this.getName()+" "+this.getSname()+" "+this.getWeight();
+	}	
+	
+	
+	public String getSname() {
+		return sname;
+	}
+
+
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+
+
+	public float getWeight() {
+		return weight;
+	}
+
+
+
+
+
+	public float getHeight() {
+		return height;
+	}
+
+
+
+
+
+	public boolean isSex() {
+		return sex;
 	}
 
 }

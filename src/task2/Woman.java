@@ -1,5 +1,7 @@
 package task2;
 
+import java.util.Random;
+
 public class Woman extends Person {
 
 	
@@ -9,10 +11,21 @@ public class Woman extends Person {
 		
 	}
 
-	public Person giveBirth(){
+	public Person giveBirth(Person p, String name){
 		
+		Person baby;
+		Random r= new Random();
+		if(r.nextInt()%2==0)
+		{
+			baby = new Woman(p.getSname(),name,this.getHeight(), this.getWeight());
+		}
+		else{
+			
+			baby = new Man(p.getSname(),name,this.getHeight(), this.getWeight());
+		}
 		
-		return null;
+		System.out.println(baby);
+		return baby; 
 	}
 	
 }
