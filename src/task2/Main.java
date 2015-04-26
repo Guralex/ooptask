@@ -4,12 +4,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-
-		Woman w = new Woman("pupkina","nastya",25,25);
-		Man m = new Man("petkin","Vasya",25,25);
+		Relations rel = new Relations();
 		
-		
-		m.date(w);
+		rel.start();
 
 	}
 

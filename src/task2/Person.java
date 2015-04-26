@@ -52,16 +52,16 @@ public abstract class Person {
 	}
 	public Person date(Person obj){
 		if(talk(obj)&&tolerate(obj)&&spendTime(obj)){
-			if(obj.sex==this.sex) {System.out.println("Date fail");return null; }
+			if(obj.sex==this.sex) {System.out.println("Date failed. Try to find someone else");return null; }
 		
 			if(obj.sex==false) {
 				Woman woman = new Woman(obj.name, obj.name, obj.height, obj.height);
 				
-				return woman.giveBirth(this, "Sanya");
+				return woman.giveBirth(this);
 			}
 			
 			Woman woman = new Woman(this.name, this.name,this.height, this.height);
-			return woman.giveBirth(obj, "Sanya");
+			return woman.giveBirth(obj);
 		};
 		System.out.println("Date fail");
 		return null;
